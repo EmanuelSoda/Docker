@@ -1,0 +1,381 @@
+#1 [internal] load build definition from Dockerfile
+#1 sha256:812103512366999db49c00b66c393e3a122f911a8ec51089a0f9a0e55901b8a0
+#1 transferring dockerfile: 177B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:076b5d4e7338a16a4928199e10d5ceb8f5e258a5ebd27956c046e0db19a20260
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/jupyter/datascience-notebook:ubuntu-22.04
+#3 sha256:eac11af1c7fe16a696348cb36c5daef13051e003fbd6b9d4d6ece730807b1a79
+#3 DONE 0.6s
+
+#4 [1/4] FROM docker.io/jupyter/datascience-notebook:ubuntu-22.04@sha256:4c0d932e38fb22bcc300bddf0688cf2770e0b3ce4d9012a74a8a43a998e65d6b
+#4 sha256:7812f51f7ff0d78bc93d81a1ef36f646987deba5a7e0bd256f963689c77d23aa
+#4 CACHED
+
+#5 [2/4] RUN conda install --yes  -c conda-forge   'pytorch'   'scvi-tools' &&   mamba clean --all -f -y &&   fix-permissions "/opt/conda" &&   fix-permissions "/home/jovyan"
+#5 sha256:d3b11aef962f28cdd6fb6fca389419ba6832bfb53c79d6d7cc38d4e378e2a7c4
+#5 3.631 Collecting package metadata (current_repodata.json): ...working... done
+#5 25.42 Solving environment: ...working... failed with initial frozen solve. Retrying with flexible solve.
+#5 326.4 Solving environment: ...working... failed with repodata from current_repodata.json, will retry with next repodata source.
+#5 602.8 Collecting package metadata (repodata.json): ...working... done
+#5 683.2 Solving environment: ...working... done
+#5 1084.6 
+#5 1084.6 ## Package Plan ##
+#5 1084.6 
+#5 1084.6   environment location: /opt/conda
+#5 1084.6 
+#5 1084.6   added / updated specs:
+#5 1084.6     - pytorch
+#5 1084.6     - scvi-tools
+#5 1084.6 
+#5 1084.6 
+#5 1084.6 The following packages will be downloaded:
+#5 1084.6 
+#5 1084.6     package                    |            build
+#5 1084.6     ---------------------------|-----------------
+#5 1084.6     absl-py-1.2.0              |     pyhd8ed1ab_0          94 KB  conda-forge
+#5 1084.6     aiohttp-3.8.1              |  py310h5764c6d_1         585 KB  conda-forge
+#5 1084.6     aiosignal-1.2.0            |     pyhd8ed1ab_0          12 KB  conda-forge
+#5 1084.6     anndata-0.8.0              |     pyhd8ed1ab_1          74 KB  conda-forge
+#5 1084.6     async-timeout-4.0.2        |     pyhd8ed1ab_0           9 KB  conda-forge
+#5 1084.6     ca-certificates-2022.9.14  |       ha878542_0         152 KB  conda-forge
+#5 1084.6     cachetools-5.2.0           |     pyhd8ed1ab_0          13 KB  conda-forge
+#5 1084.6     certifi-2022.9.14          |     pyhd8ed1ab_0         156 KB  conda-forge
+#5 1084.6     chex-0.1.5                 |     pyhd8ed1ab_0          66 KB  conda-forge
+#5 1084.6     commonmark-0.9.1           |             py_0          46 KB  conda-forge
+#5 1084.6     dataclasses-0.8            |     pyhc8e2a94_3          10 KB  conda-forge
+#5 1084.6     dm-tree-0.1.7              |  py310h769672d_0         149 KB  conda-forge
+#5 1084.6     docrep-0.3.2               |     pyh44b312d_0          19 KB  conda-forge
+#5 1084.6     et_xmlfile-1.0.1           |          py_1001          11 KB  conda-forge
+#5 1084.6     etils-0.8.0                |     pyhd8ed1ab_0          74 KB  conda-forge
+#5 1084.6     flax-0.5.0                 |     pyhd8ed1ab_0         124 KB  conda-forge
+#5 1084.6     frozenlist-1.3.1           |  py310h5764c6d_0          44 KB  conda-forge
+#5 1084.6     future-0.18.2              |  py310hff52083_5         738 KB  conda-forge
+#5 1084.6     google-auth-2.11.0         |     pyh6c4a22f_0          90 KB  conda-forge
+#5 1084.6     google-auth-oauthlib-0.4.6 |     pyhd8ed1ab_0          19 KB  conda-forge
+#5 1084.6     grpc-cpp-1.46.4            |       hbad87ad_7         5.4 MB  conda-forge
+#5 1084.6     grpcio-1.46.4              |  py310h946def9_7         799 KB  conda-forge
+#5 1084.6     jax-0.3.17                 |     pyhd8ed1ab_0         884 KB  conda-forge
+#5 1084.6     jaxlib-0.3.15              |cpu_py310h26b86ec_3        45.6 MB  conda-forge
+#5 1084.6     libabseil-20220623.0       | cxx17_h48a1fff_4         1.1 MB  conda-forge
+#5 1084.6     libprotobuf-3.20.1         |       h6239696_4         2.6 MB  conda-forge
+#5 1084.6     markdown-3.4.1             |     pyhd8ed1ab_0          65 KB  conda-forge
+#5 1084.6     mkl-2022.1.0               |     h84fe81f_915       199.6 MB  conda-forge
+#5 1084.6     multidict-6.0.2            |  py310h5764c6d_1          51 KB  conda-forge
+#5 1084.6     multipledispatch-0.6.0     |             py_0          12 KB  conda-forge
+#5 1084.6     natsort-8.2.0              |     pyhd8ed1ab_0          36 KB  conda-forge
+#5 1084.6     ninja-1.11.0               |       h924138e_0         2.8 MB  conda-forge
+#5 1084.6     numexpr-2.7.3              |  py310hb5077e9_1         513 KB  conda-forge
+#5 1084.6     numpyro-0.10.1             |     pyhd8ed1ab_0         209 KB  conda-forge
+#5 1084.6     openpyxl-3.0.10            |  py310h5764c6d_1         561 KB  conda-forge
+#5 1084.6     opt_einsum-3.3.0           |     pyhd8ed1ab_1          53 KB  conda-forge
+#5 1084.6     optax-0.1.3                |     pyhd8ed1ab_0          95 KB  conda-forge
+#5 1084.6     protobuf-3.20.1            |  py310hd8f1fbe_0         325 KB  conda-forge
+#5 1084.6     pyasn1-0.4.8               |             py_0          53 KB  conda-forge
+#5 1084.6     pyasn1-modules-0.2.7       |             py_0          60 KB  conda-forge
+#5 1084.6     pydeprecate-0.3.1          |     pyhd8ed1ab_0          13 KB  conda-forge
+#5 1084.6     pyro-api-0.1.2             |     pyhd8ed1ab_0          15 KB  conda-forge
+#5 1084.6     pyro-ppl-1.8.2             |     pyhd8ed1ab_0         464 KB  conda-forge
+#5 1084.6     pytorch-1.12.1             |cpu_py310h75c9ab6_0        62.3 MB  conda-forge
+#5 1084.6     pytorch-lightning-1.5.8    |     pyhd8ed1ab_0         298 KB  conda-forge
+#5 1084.6     pyu2f-0.1.5                |     pyhd8ed1ab_0          31 KB  conda-forge
+#5 1084.6     re2-2022.06.01             |       h27087fc_0         215 KB  conda-forge
+#5 1084.6     requests-oauthlib-1.3.1    |     pyhd8ed1ab_0          22 KB  conda-forge
+#5 1084.6     rich-12.5.1                |     pyhd8ed1ab_0         168 KB  conda-forge
+#5 1084.6     rsa-4.9                    |     pyhd8ed1ab_0          29 KB  conda-forge
+#5 1084.6     scvi-tools-0.16.4          |     pyhd8ed1ab_0         155 KB  conda-forge
+#5 1084.6     sleef-3.5.1                |       h9b69904_2         1.5 MB  conda-forge
+#5 1084.6     tbb-2021.5.0               |       h924138e_2         1.9 MB  conda-forge
+#5 1084.6     tensorboard-2.10.0         |     pyhd8ed1ab_2         5.4 MB  conda-forge
+#5 1084.6     tensorboard-data-server-0.6.0|  py310h597c629_2         3.1 MB  conda-forge
+#5 1084.6     tensorboard-plugin-wit-1.8.1|     pyhd8ed1ab_0         668 KB  conda-forge
+#5 1084.6     torchmetrics-0.9.3         |     pyhd8ed1ab_0         193 KB  conda-forge
+#5 1084.6     typing-extensions-4.3.0    |       hd8ed1ab_0           8 KB  conda-forge
+#5 1084.6     werkzeug-2.2.2             |     pyhd8ed1ab_0         249 KB  conda-forge
+#5 1084.6     yarl-1.7.2                 |  py310h5764c6d_2         132 KB  conda-forge
+#5 1084.6     ------------------------------------------------------------
+#5 1084.6                                            Total:       340.0 MB
+#5 1084.6 
+#5 1084.6 The following NEW packages will be INSTALLED:
+#5 1084.6 
+#5 1084.6   absl-py            conda-forge/noarch::absl-py-1.2.0-pyhd8ed1ab_0
+#5 1084.6   aiohttp            conda-forge/linux-64::aiohttp-3.8.1-py310h5764c6d_1
+#5 1084.6   aiosignal          conda-forge/noarch::aiosignal-1.2.0-pyhd8ed1ab_0
+#5 1084.6   anndata            conda-forge/noarch::anndata-0.8.0-pyhd8ed1ab_1
+#5 1084.6   async-timeout      conda-forge/noarch::async-timeout-4.0.2-pyhd8ed1ab_0
+#5 1084.6   cachetools         conda-forge/noarch::cachetools-5.2.0-pyhd8ed1ab_0
+#5 1084.6   chex               conda-forge/noarch::chex-0.1.5-pyhd8ed1ab_0
+#5 1084.6   commonmark         conda-forge/noarch::commonmark-0.9.1-py_0
+#5 1084.6   dataclasses        conda-forge/noarch::dataclasses-0.8-pyhc8e2a94_3
+#5 1084.6   dm-tree            conda-forge/linux-64::dm-tree-0.1.7-py310h769672d_0
+#5 1084.6   docrep             conda-forge/noarch::docrep-0.3.2-pyh44b312d_0
+#5 1084.6   et_xmlfile         conda-forge/noarch::et_xmlfile-1.0.1-py_1001
+#5 1084.6   etils              conda-forge/noarch::etils-0.8.0-pyhd8ed1ab_0
+#5 1084.6   flax               conda-forge/noarch::flax-0.5.0-pyhd8ed1ab_0
+#5 1084.6   frozenlist         conda-forge/linux-64::frozenlist-1.3.1-py310h5764c6d_0
+#5 1084.6   future             conda-forge/linux-64::future-0.18.2-py310hff52083_5
+#5 1084.6   google-auth        conda-forge/noarch::google-auth-2.11.0-pyh6c4a22f_0
+#5 1084.6   google-auth-oauth~ conda-forge/noarch::google-auth-oauthlib-0.4.6-pyhd8ed1ab_0
+#5 1084.6   grpc-cpp           conda-forge/linux-64::grpc-cpp-1.46.4-hbad87ad_7
+#5 1084.6   grpcio             conda-forge/linux-64::grpcio-1.46.4-py310h946def9_7
+#5 1084.6   jax                conda-forge/noarch::jax-0.3.17-pyhd8ed1ab_0
+#5 1084.6   jaxlib             conda-forge/linux-64::jaxlib-0.3.15-cpu_py310h26b86ec_3
+#5 1084.6   libabseil          conda-forge/linux-64::libabseil-20220623.0-cxx17_h48a1fff_4
+#5 1084.6   markdown           conda-forge/noarch::markdown-3.4.1-pyhd8ed1ab_0
+#5 1084.6   mkl                conda-forge/linux-64::mkl-2022.1.0-h84fe81f_915
+#5 1084.6   multidict          conda-forge/linux-64::multidict-6.0.2-py310h5764c6d_1
+#5 1084.6   multipledispatch   conda-forge/noarch::multipledispatch-0.6.0-py_0
+#5 1084.6   natsort            conda-forge/noarch::natsort-8.2.0-pyhd8ed1ab_0
+#5 1084.6   ninja              conda-forge/linux-64::ninja-1.11.0-h924138e_0
+#5 1084.6   numpyro            conda-forge/noarch::numpyro-0.10.1-pyhd8ed1ab_0
+#5 1084.6   openpyxl           conda-forge/linux-64::openpyxl-3.0.10-py310h5764c6d_1
+#5 1084.6   opt_einsum         conda-forge/noarch::opt_einsum-3.3.0-pyhd8ed1ab_1
+#5 1084.6   optax              conda-forge/noarch::optax-0.1.3-pyhd8ed1ab_0
+#5 1084.6   pyasn1             conda-forge/noarch::pyasn1-0.4.8-py_0
+#5 1084.6   pyasn1-modules     conda-forge/noarch::pyasn1-modules-0.2.7-py_0
+#5 1084.6   pydeprecate        conda-forge/noarch::pydeprecate-0.3.1-pyhd8ed1ab_0
+#5 1084.6   pyro-api           conda-forge/noarch::pyro-api-0.1.2-pyhd8ed1ab_0
+#5 1084.6   pyro-ppl           conda-forge/noarch::pyro-ppl-1.8.2-pyhd8ed1ab_0
+#5 1084.6   pytorch            conda-forge/linux-64::pytorch-1.12.1-cpu_py310h75c9ab6_0
+#5 1084.6   pytorch-lightning  conda-forge/noarch::pytorch-lightning-1.5.8-pyhd8ed1ab_0
+#5 1084.6   pyu2f              conda-forge/noarch::pyu2f-0.1.5-pyhd8ed1ab_0
+#5 1084.6   re2                conda-forge/linux-64::re2-2022.06.01-h27087fc_0
+#5 1084.6   requests-oauthlib  conda-forge/noarch::requests-oauthlib-1.3.1-pyhd8ed1ab_0
+#5 1084.6   rich               conda-forge/noarch::rich-12.5.1-pyhd8ed1ab_0
+#5 1084.6   rsa                conda-forge/noarch::rsa-4.9-pyhd8ed1ab_0
+#5 1084.6   scvi-tools         conda-forge/noarch::scvi-tools-0.16.4-pyhd8ed1ab_0
+#5 1084.6   sleef              conda-forge/linux-64::sleef-3.5.1-h9b69904_2
+#5 1084.6   tbb                conda-forge/linux-64::tbb-2021.5.0-h924138e_2
+#5 1084.6   tensorboard        conda-forge/noarch::tensorboard-2.10.0-pyhd8ed1ab_2
+#5 1084.6   tensorboard-data-~ conda-forge/linux-64::tensorboard-data-server-0.6.0-py310h597c629_2
+#5 1084.6   tensorboard-plugi~ conda-forge/noarch::tensorboard-plugin-wit-1.8.1-pyhd8ed1ab_0
+#5 1084.6   torchmetrics       conda-forge/noarch::torchmetrics-0.9.3-pyhd8ed1ab_0
+#5 1084.6   typing-extensions  conda-forge/noarch::typing-extensions-4.3.0-hd8ed1ab_0
+#5 1084.6   werkzeug           conda-forge/noarch::werkzeug-2.2.2-pyhd8ed1ab_0
+#5 1084.6   yarl               conda-forge/linux-64::yarl-1.7.2-py310h5764c6d_2
+#5 1084.6 
+#5 1084.6 The following packages will be REMOVED:
+#5 1084.6 
+#5 1084.6   nomkl-1.0-h5ca1d4c_0
+#5 1084.6 
+#5 1084.6 The following packages will be UPDATED:
+#5 1084.6 
+#5 1084.6   ca-certificates                    2022.6.15.1-ha878542_0 --> 2022.9.14-ha878542_0
+#5 1084.6   certifi                          2022.6.15.1-pyhd8ed1ab_0 --> 2022.9.14-pyhd8ed1ab_0
+#5 1084.6 
+#5 1084.6 The following packages will be DOWNGRADED:
+#5 1084.6 
+#5 1084.6   libprotobuf                             3.21.5-h6239696_3 --> 3.20.1-h6239696_4
+#5 1084.6   numexpr                           2.8.3-py310hf05e7a9_100 --> 2.7.3-py310hb5077e9_1
+#5 1084.6   protobuf                           4.21.5-py310hd8f1fbe_1 --> 3.20.1-py310hd8f1fbe_0
+#5 1084.6 
+#5 1084.6 
+#5 1084.6 
+#5 1084.6 Downloading and Extracting Packages
+#5 1084.6 et_xmlfile-1.0.1     | 11 KB     |            |   0% et_xmlfile-1.0.1     | 11 KB     | ########## | 100% et_xmlfile-1.0.1     | 11 KB     | ########## | 100% 
+#5 1084.8 natsort-8.2.0        | 36 KB     |            |   0% natsort-8.2.0        | 36 KB     | ########## | 100% 
+#5 1084.9 certifi-2022.9.14    | 156 KB    |            |   0% certifi-2022.9.14    | 156 KB    | ########## | 100% certifi-2022.9.14    | 156 KB    | ########## | 100% 
+#5 1085.0 numexpr-2.7.3        | 513 KB    |            |   0% numexpr-2.7.3        | 513 KB    | 3          |   3% numexpr-2.7.3        | 513 KB    | ########## | 100% numexpr-2.7.3        | 513 KB    | ########## | 100% 
+#5 1085.3 etils-0.8.0          | 74 KB     |            |   0% etils-0.8.0          | 74 KB     | ##1        |  22% etils-0.8.0          | 74 KB     | ########## | 100% 
+#5 1085.5 rsa-4.9              | 29 KB     |            |   0% rsa-4.9              | 29 KB     | #####4     |  55% rsa-4.9              | 29 KB     | ########## | 100% 
+#5 1085.7 libabseil-20220623.0 | 1.1 MB    |            |   0% libabseil-20220623.0 | 1.1 MB    | 1          |   1% libabseil-20220623.0 | 1.1 MB    | #4         |  14% libabseil-20220623.0 | 1.1 MB    | ##6        |  27% libabseil-20220623.0 | 1.1 MB    | ####2      |  43% libabseil-20220623.0 | 1.1 MB    | #####8     |  58% libabseil-20220623.0 | 1.1 MB    | ########3  |  84% libabseil-20220623.0 | 1.1 MB    | ########## | 100% libabseil-20220623.0 | 1.1 MB    | ########## | 100% 
+#5 1086.8 docrep-0.3.2         | 19 KB     |            |   0% docrep-0.3.2         | 19 KB     | ########5  |  86% docrep-0.3.2         | 19 KB     | ########## | 100% 
+#5 1087.0 typing-extensions-4. | 8 KB      |            |   0% typing-extensions-4. | 8 KB      | ########## | 100% 
+#5 1087.1 commonmark-0.9.1     | 46 KB     |            |   0% commonmark-0.9.1     | 46 KB     | ########## | 100% 
+#5 1087.2 pytorch-1.12.1       | 62.3 MB   |            |   0% pytorch-1.12.1       | 62.3 MB   |            |   0% pytorch-1.12.1       | 62.3 MB   |            |   0% pytorch-1.12.1       | 62.3 MB   | 1          |   1% pytorch-1.12.1       | 62.3 MB   | 2          |   3% pytorch-1.12.1       | 62.3 MB   | 4          |   5% pytorch-1.12.1       | 62.3 MB   | 9          |   9% pytorch-1.12.1       | 62.3 MB   | #3         |  13% pytorch-1.12.1       | 62.3 MB   | #8         |  18% pytorch-1.12.1       | 62.3 MB   | ##2        |  22% pytorch-1.12.1       | 62.3 MB   | ##8        |  28% pytorch-1.12.1       | 62.3 MB   | ###3       |  33% pytorch-1.12.1       | 62.3 MB   | ###7       |  38% pytorch-1.12.1       | 62.3 MB   | ####1      |  42% pytorch-1.12.1       | 62.3 MB   | ####7      |  48% pytorch-1.12.1       | 62.3 MB   | #####4     |  55% pytorch-1.12.1       | 62.3 MB   | ######1    |  62% pytorch-1.12.1       | 62.3 MB   | ######8    |  68% pytorch-1.12.1       | 62.3 MB   | #######5   |  76% pytorch-1.12.1       | 62.3 MB   | ########2  |  82% pytorch-1.12.1       | 62.3 MB   | ########8  |  88% pytorch-1.12.1       | 62.3 MB   | #########4 |  95% pytorch-1.12.1       | 62.3 MB   | ########## | 100% 
+#5 1100.6 rich-12.5.1          | 168 KB    |            |   0% rich-12.5.1          | 168 KB    | ########## | 100% rich-12.5.1          | 168 KB    | ########## | 100% 
+#5 1100.8 flax-0.5.0           | 124 KB    |            |   0% flax-0.5.0           | 124 KB    | #2         |  13% flax-0.5.0           | 124 KB    | ########## | 100% 
+#5 1101.0 google-auth-oauthlib | 19 KB     |            |   0% google-auth-oauthlib | 19 KB     | ########4  |  85% google-auth-oauthlib | 19 KB     | ########## | 100% 
+#5 1101.1 scvi-tools-0.16.4    | 155 KB    |            |   0% scvi-tools-0.16.4    | 155 KB    | #          |  10% scvi-tools-0.16.4    | 155 KB    | ########## | 100% scvi-tools-0.16.4    | 155 KB    | ########## | 100% 
+#5 1101.5 pyro-ppl-1.8.2       | 464 KB    |            |   0% pyro-ppl-1.8.2       | 464 KB    | 3          |   3% pyro-ppl-1.8.2       | 464 KB    | ########## | 100% pyro-ppl-1.8.2       | 464 KB    | ########## | 100% 
+#5 1101.8 ca-certificates-2022 | 152 KB    |            |   0% ca-certificates-2022 | 152 KB    | ########## | 100% 
+#5 1101.9 yarl-1.7.2           | 132 KB    |            |   0% yarl-1.7.2           | 132 KB    | #2         |  12% yarl-1.7.2           | 132 KB    | ########## | 100% 
+#5 1102.0 sleef-3.5.1          | 1.5 MB    |            |   0% sleef-3.5.1          | 1.5 MB    | 1          |   1% sleef-3.5.1          | 1.5 MB    | ########## | 100% sleef-3.5.1          | 1.5 MB    | ########## | 100% 
+#5 1102.5 chex-0.1.5           | 66 KB     |            |   0% chex-0.1.5           | 66 KB     | ##4        |  24% chex-0.1.5           | 66 KB     | ########## | 100% 
+#5 1102.6 werkzeug-2.2.2       | 249 KB    |            |   0% werkzeug-2.2.2       | 249 KB    | ########## | 100% werkzeug-2.2.2       | 249 KB    | ########## | 100% 
+#5 1102.8 anndata-0.8.0        | 74 KB     |            |   0% anndata-0.8.0        | 74 KB     | ########## | 100% 
+#5 1102.8 re2-2022.06.01       | 215 KB    |            |   0% re2-2022.06.01       | 215 KB    | 7          |   7% re2-2022.06.01       | 215 KB    | ########## | 100% 
+#5 1103.1 pyu2f-0.1.5          | 31 KB     |            |   0% pyu2f-0.1.5          | 31 KB     | #####1     |  51% pyu2f-0.1.5          | 31 KB     | ########## | 100% 
+#5 1103.3 grpc-cpp-1.46.4      | 5.4 MB    |            |   0% grpc-cpp-1.46.4      | 5.4 MB    |            |   0% grpc-cpp-1.46.4      | 5.4 MB    | ##3        |  24% grpc-cpp-1.46.4      | 5.4 MB    | #########1 |  92% grpc-cpp-1.46.4      | 5.4 MB    | ########## | 100% 
+#5 1104.4 tensorboard-data-ser | 3.1 MB    |            |   0% tensorboard-data-ser | 3.1 MB    |            |   0% tensorboard-data-ser | 3.1 MB    | ######7    |  68% tensorboard-data-ser | 3.1 MB    | ########## | 100% 
+#5 1105.1 requests-oauthlib-1. | 22 KB     |            |   0% requests-oauthlib-1. | 22 KB     | #######3   |  74% requests-oauthlib-1. | 22 KB     | ########## | 100% 
+#5 1105.3 pytorch-lightning-1. | 298 KB    |            |   0% pytorch-lightning-1. | 298 KB    | 5          |   5% pytorch-lightning-1. | 298 KB    | ####2      |  43% pytorch-lightning-1. | 298 KB    | ########## | 100% pytorch-lightning-1. | 298 KB    | ########## | 100% 
+#5 1105.7 aiohttp-3.8.1        | 585 KB    |            |   0% aiohttp-3.8.1        | 585 KB    | ########## | 100% aiohttp-3.8.1        | 585 KB    | ########## | 100% 
+#5 1105.9 pydeprecate-0.3.1    | 13 KB     |            |   0% pydeprecate-0.3.1    | 13 KB     | ########## | 100% pydeprecate-0.3.1    | 13 KB     | ########## | 100% 
+#5 1106.1 tensorboard-plugin-w | 668 KB    |            |   0% tensorboard-plugin-w | 668 KB    | 2          |   2% tensorboard-plugin-w | 668 KB    | ##6        |  26% tensorboard-plugin-w | 668 KB    | #####5     |  55% tensorboard-plugin-w | 668 KB    | ########3  |  84% tensorboard-plugin-w | 668 KB    | ########## | 100% 
+#5 1106.7 markdown-3.4.1       | 65 KB     |            |   0% markdown-3.4.1       | 65 KB     | ########## | 100% 
+#5 1106.8 numpyro-0.10.1       | 209 KB    |            |   0% numpyro-0.10.1       | 209 KB    | 7          |   8% numpyro-0.10.1       | 209 KB    | ########## | 100% numpyro-0.10.1       | 209 KB    | ########## | 100% 
+#5 1107.2 tbb-2021.5.0         | 1.9 MB    |            |   0% tbb-2021.5.0         | 1.9 MB    |            |   1% tbb-2021.5.0         | 1.9 MB    | ####1      |  41% tbb-2021.5.0         | 1.9 MB    | ########4  |  84% tbb-2021.5.0         | 1.9 MB    | ########## | 100% 
+#5 1107.8 dataclasses-0.8      | 10 KB     |            |   0% dataclasses-0.8      | 10 KB     | ########## | 100% 
+#5 1107.9 pyasn1-modules-0.2.7 | 60 KB     |            |   0% pyasn1-modules-0.2.7 | 60 KB     | ##6        |  27% pyasn1-modules-0.2.7 | 60 KB     | ########## | 100% 
+#5 1108.0 optax-0.1.3          | 95 KB     |            |   0% optax-0.1.3          | 95 KB     | #6         |  17% optax-0.1.3          | 95 KB     | ########## | 100% 
+#5 1108.3 cachetools-5.2.0     | 13 KB     |            |   0% cachetools-5.2.0     | 13 KB     | ########## | 100% 
+#5 1108.3 libprotobuf-3.20.1   | 2.6 MB    |            |   0% libprotobuf-3.20.1   | 2.6 MB    |            |   1% libprotobuf-3.20.1   | 2.6 MB    | #######2   |  73% libprotobuf-3.20.1   | 2.6 MB    | ########## | 100% 
+#5 1109.0 pyro-api-0.1.2       | 15 KB     |            |   0% pyro-api-0.1.2       | 15 KB     | ########## | 100% pyro-api-0.1.2       | 15 KB     | ########## | 100% 
+#5 1109.1 frozenlist-1.3.1     | 44 KB     |            |   0% frozenlist-1.3.1     | 44 KB     | ###6       |  36% frozenlist-1.3.1     | 44 KB     | ########## | 100% 
+#5 1109.3 multipledispatch-0.6 | 12 KB     |            |   0% multipledispatch-0.6 | 12 KB     | ########## | 100% multipledispatch-0.6 | 12 KB     | ########## | 100% 
+#5 1109.5 async-timeout-4.0.2  | 9 KB      |            |   0% async-timeout-4.0.2  | 9 KB      | ########## | 100% async-timeout-4.0.2  | 9 KB      | ########## | 100% 
+#5 1109.7 opt_einsum-3.3.0     | 53 KB     |            |   0% opt_einsum-3.3.0     | 53 KB     | ###        |  30% opt_einsum-3.3.0     | 53 KB     | ########## | 100% 
+#5 1109.9 torchmetrics-0.9.3   | 193 KB    |            |   0% torchmetrics-0.9.3   | 193 KB    | 8          |   8% torchmetrics-0.9.3   | 193 KB    | ########## | 100% 
+#5 1110.2 google-auth-2.11.0   | 90 KB     |            |   0% google-auth-2.11.0   | 90 KB     | #7         |  18% google-auth-2.11.0   | 90 KB     | ########## | 100% 
+#5 1110.4 pyasn1-0.4.8         | 53 KB     |            |   0% pyasn1-0.4.8         | 53 KB     | ########## | 100% 
+#5 1110.5 jaxlib-0.3.15        | 45.6 MB   |            |   0% jaxlib-0.3.15        | 45.6 MB   |            |   0% jaxlib-0.3.15        | 45.6 MB   |            |   0% jaxlib-0.3.15        | 45.6 MB   | 1          |   1% jaxlib-0.3.15        | 45.6 MB   | 3          |   3% jaxlib-0.3.15        | 45.6 MB   | 5          |   6% jaxlib-0.3.15        | 45.6 MB   | 8          |   9% jaxlib-0.3.15        | 45.6 MB   | #1         |  11% jaxlib-0.3.15        | 45.6 MB   | #4         |  14% jaxlib-0.3.15        | 45.6 MB   | #6         |  17% jaxlib-0.3.15        | 45.6 MB   | #9         |  20% jaxlib-0.3.15        | 45.6 MB   | ##2        |  22% jaxlib-0.3.15        | 45.6 MB   | ##5        |  25% jaxlib-0.3.15        | 45.6 MB   | ##8        |  29% jaxlib-0.3.15        | 45.6 MB   | ###4       |  35% jaxlib-0.3.15        | 45.6 MB   | ####5      |  45% jaxlib-0.3.15        | 45.6 MB   | #####6     |  57% jaxlib-0.3.15        | 45.6 MB   | ######6    |  66% jaxlib-0.3.15        | 45.6 MB   | #######4   |  74% jaxlib-0.3.15        | 45.6 MB   | ########1  |  82% jaxlib-0.3.15        | 45.6 MB   | ########9  |  89% jaxlib-0.3.15        | 45.6 MB   | #########8 |  98% jaxlib-0.3.15        | 45.6 MB   | ########## | 100% 
+#5 1119.8 future-0.18.2        | 738 KB    |            |   0% future-0.18.2        | 738 KB    | 2          |   2% future-0.18.2        | 738 KB    | ###2       |  33% future-0.18.2        | 738 KB    | ########## | 100% future-0.18.2        | 738 KB    | ########## | 100% 
+#5 1120.4 aiosignal-1.2.0      | 12 KB     |            |   0% aiosignal-1.2.0      | 12 KB     | ########## | 100% aiosignal-1.2.0      | 12 KB     | ########## | 100% 
+#5 1120.6 absl-py-1.2.0        | 94 KB     |            |   0% absl-py-1.2.0        | 94 KB     | ########## | 100% 
+#5 1120.7 tensorboard-2.10.0   | 5.4 MB    |            |   0% tensorboard-2.10.0   | 5.4 MB    |            |   0% tensorboard-2.10.0   | 5.4 MB    | 5          |   6% tensorboard-2.10.0   | 5.4 MB    | #3         |  14% tensorboard-2.10.0   | 5.4 MB    | ###7       |  37% tensorboard-2.10.0   | 5.4 MB    | ########4  |  85% tensorboard-2.10.0   | 5.4 MB    | ########## | 100% 
+#5 1121.9 ninja-1.11.0         | 2.8 MB    |            |   0% ninja-1.11.0         | 2.8 MB    |            |   1% ninja-1.11.0         | 2.8 MB    | 5          |   6% ninja-1.11.0         | 2.8 MB    | #1         |  12% ninja-1.11.0         | 2.8 MB    | #8         |  18% ninja-1.11.0         | 2.8 MB    | ##3        |  23% ninja-1.11.0         | 2.8 MB    | ###1       |  32% ninja-1.11.0         | 2.8 MB    | ###7       |  37% ninja-1.11.0         | 2.8 MB    | ####5      |  45% ninja-1.11.0         | 2.8 MB    | #####      |  51% ninja-1.11.0         | 2.8 MB    | #####6     |  56% ninja-1.11.0         | 2.8 MB    | ########6  |  86% ninja-1.11.0         | 2.8 MB    | #########7 |  97% ninja-1.11.0         | 2.8 MB    | ########## | 100% 
+#5 1124.2 mkl-2022.1.0         | 199.6 MB  |            |   0% mkl-2022.1.0         | 199.6 MB  |            |   0% mkl-2022.1.0         | 199.6 MB  |            |   0% mkl-2022.1.0         | 199.6 MB  |            |   0% mkl-2022.1.0         | 199.6 MB  |            |   0% mkl-2022.1.0         | 199.6 MB  |            |   0% mkl-2022.1.0         | 199.6 MB  |            |   0% mkl-2022.1.0         | 199.6 MB  |            |   1% mkl-2022.1.0         | 199.6 MB  |            |   1% mkl-2022.1.0         | 199.6 MB  |            |   1% mkl-2022.1.0         | 199.6 MB  | 1          |   1% mkl-2022.1.0         | 199.6 MB  | 1          |   2% mkl-2022.1.0         | 199.6 MB  | 2          |   2% mkl-2022.1.0         | 199.6 MB  | 3          |   4% mkl-2022.1.0         | 199.6 MB  | 4          |   5% mkl-2022.1.0         | 199.6 MB  | 5          |   5% mkl-2022.1.0         | 199.6 MB  | 6          |   7% mkl-2022.1.0         | 199.6 MB  | 7          |   7% mkl-2022.1.0         | 199.6 MB  | 8          |   9% mkl-2022.1.0         | 199.6 MB  | 9          |  10% mkl-2022.1.0         | 199.6 MB  | #          |  11% mkl-2022.1.0         | 199.6 MB  | #1         |  12% mkl-2022.1.0         | 199.6 MB  | #2         |  12% mkl-2022.1.0         | 199.6 MB  | #3         |  14% mkl-2022.1.0         | 199.6 MB  | #4         |  15% mkl-2022.1.0         | 199.6 MB  | #6         |  17% mkl-2022.1.0         | 199.6 MB  | #8         |  18% mkl-2022.1.0         | 199.6 MB  | #9         |  20% mkl-2022.1.0         | 199.6 MB  | ##1        |  21% mkl-2022.1.0         | 199.6 MB  | ##2        |  23% mkl-2022.1.0         | 199.6 MB  | ##4        |  25% mkl-2022.1.0         | 199.6 MB  | ##7        |  27% mkl-2022.1.0         | 199.6 MB  | ##9        |  29% mkl-2022.1.0         | 199.6 MB  | ###1       |  31% mkl-2022.1.0         | 199.6 MB  | ###3       |  34% mkl-2022.1.0         | 199.6 MB  | ###5       |  36% mkl-2022.1.0         | 199.6 MB  | ###8       |  38% mkl-2022.1.0         | 199.6 MB  | ####       |  40% mkl-2022.1.0         | 199.6 MB  | ####2      |  42% mkl-2022.1.0         | 199.6 MB  | ####4      |  44% mkl-2022.1.0         | 199.6 MB  | ####6      |  46% mkl-2022.1.0         | 199.6 MB  | ####8      |  48% mkl-2022.1.0         | 199.6 MB  | #####      |  50% mkl-2022.1.0         | 199.6 MB  | #####2     |  53% mkl-2022.1.0         | 199.6 MB  | #####5     |  55% mkl-2022.1.0         | 199.6 MB  | #####7     |  57% mkl-2022.1.0         | 199.6 MB  | #####9     |  60% mkl-2022.1.0         | 199.6 MB  | ######2    |  62% mkl-2022.1.0         | 199.6 MB  | ######4    |  64% mkl-2022.1.0         | 199.6 MB  | ######6    |  66% mkl-2022.1.0         | 199.6 MB  | ######8    |  69% mkl-2022.1.0         | 199.6 MB  | #######    |  71% mkl-2022.1.0         | 199.6 MB  | #######2   |  73% mkl-2022.1.0         | 199.6 MB  | #######4   |  75% mkl-2022.1.0         | 199.6 MB  | #######6   |  77% mkl-2022.1.0         | 199.6 MB  | #######8   |  79% mkl-2022.1.0         | 199.6 MB  | ########   |  81% mkl-2022.1.0         | 199.6 MB  | ########2  |  83% mkl-2022.1.0         | 199.6 MB  | ########4  |  85% mkl-2022.1.0         | 199.6 MB  | ########6  |  87% mkl-2022.1.0         | 199.6 MB  | ########8  |  89% mkl-2022.1.0         | 199.6 MB  | #########  |  91% mkl-2022.1.0         | 199.6 MB  | #########2 |  93% mkl-2022.1.0         | 199.6 MB  | #########4 |  95% mkl-2022.1.0         | 199.6 MB  | #########6 |  97% mkl-2022.1.0         | 199.6 MB  | #########8 |  99% mkl-2022.1.0         | 199.6 MB  | ########## | 100% 
+#5 1162.0 dm-tree-0.1.7        | 149 KB    |            |   0% dm-tree-0.1.7        | 149 KB    | #          |  11% dm-tree-0.1.7        | 149 KB    | ########## | 100% 
+#5 1162.2 protobuf-3.20.1      | 325 KB    |            |   0% protobuf-3.20.1      | 325 KB    | 4          |   5% protobuf-3.20.1      | 325 KB    | ########## | 100% 
+#5 1162.5 multidict-6.0.2      | 51 KB     |            |   0% multidict-6.0.2      | 51 KB     | ########## | 100% 
+#5 1162.5 grpcio-1.46.4        | 799 KB    |            |   0% grpcio-1.46.4        | 799 KB    | 2          |   2% grpcio-1.46.4        | 799 KB    | ##4        |  24% grpcio-1.46.4        | 799 KB    | ########   |  80% grpcio-1.46.4        | 799 KB    | ########## | 100% 
+#5 1163.1 jax-0.3.17           | 884 KB    |            |   0% jax-0.3.17           | 884 KB    | 1          |   2% jax-0.3.17           | 884 KB    | ####8      |  49% jax-0.3.17           | 884 KB    | ########## | 100% jax-0.3.17           | 884 KB    | ########## | 100% 
+#5 1163.6 openpyxl-3.0.10      | 561 KB    |            |   0% openpyxl-3.0.10      | 561 KB    | 2          |   3% openpyxl-3.0.10      | 561 KB    | #######7   |  77% openpyxl-3.0.10      | 561 KB    | ########## | 100% 
+#5 1164.0 Preparing transaction: ...working... done
+#5 1164.8 Verifying transaction: ...working... done
+#5 1170.5 Executing transaction: ...working... done
+#5 1178.3 Retrieving notices: ...working... done
+#5 1185.9 Will remove 1 package cache(s).
+#5 DONE 1188.2s
+
+#6 [3/4] RUN mamba install --yes -c conda-forge   'openjdk'   'jaxlib'   'jax'   'scanpy'   'python-igraph'   'leidenalg'  &&   mamba clean --all -f -y &&   fix-permissions "/opt/conda" &&   fix-permissions "/home/jovyan"
+#6 sha256:a1ad71fe0263ebe1ad776a4f728a50d7199734d8d179679a54057a568c45754a
+#6 20.16 Transaction
+#6 20.16 
+#6 20.16   Prefix: /opt/conda
+#6 20.16 
+#6 20.16   Updating specs:
+#6 20.16 
+#6 20.16    - openjdk
+#6 20.16    - jaxlib
+#6 20.16    - jax
+#6 20.16    - scanpy
+#6 20.16    - python-igraph
+#6 20.16    - leidenalg
+#6 20.16    - ca-certificates
+#6 20.16    - certifi
+#6 20.16    - openssl
+#6 20.16 
+#6 20.16 
+#6 20.17   Package                          Version  Build            Channel                   Size
+#6 20.17 ─────────────────────────────────────────────────────────────────────────────────────────────
+#6 20.17   Install:
+#6 20.17 ─────────────────────────────────────────────────────────────────────────────────────────────
+#6 20.17 
+#6 20.17   + alabaster                       0.7.12  py_0             conda-forge/noarch        15kB
+#6 20.17   + alsa-lib                       1.2.7.2  h166bdaf_0       conda-forge/linux-64     595kB
+#6 20.17   + arpack                           3.7.0  hdefa2d7_2       conda-forge/linux-64     220kB
+#6 20.17   + docutils                          0.19  py310hff52083_0  conda-forge/linux-64     781kB
+#6 20.17   + glpk                              4.65  h9202a9a_1004    conda-forge/linux-64       1MB
+#6 20.17   + igraph                          0.9.10  h026ac8f_0       conda-forge/linux-64       1MB
+#6 20.17   + imagesize                        1.4.1  pyhd8ed1ab_0     conda-forge/noarch        10kB
+#6 20.17   + leidenalg                       0.8.10  py310hd8f1fbe_0  conda-forge/linux-64     145kB
+#6 20.17   + libcups                          2.3.3  h3e49a29_2       conda-forge/linux-64       5MB
+#6 20.17   + metis                            5.1.0  h58526e2_1006    conda-forge/linux-64       4MB
+#6 20.17   + openjdk                         17.0.3  h85293d2_2       conda-forge/linux-64     181MB
+#6 20.17   + pynndescent                      0.5.7  pyh6c4a22f_0     conda-forge/noarch        47kB
+#6 20.17   + python-igraph                   0.9.11  py310hb58d747_0  conda-forge/linux-64       1MB
+#6 20.17   + scanpy                           1.9.1  pyhd8ed1ab_0     conda-forge/noarch         2MB
+#6 20.17   + session-info                     1.0.0  pyhd8ed1ab_0     conda-forge/noarch        12kB
+#6 20.17   + snowballstemmer                  2.2.0  pyhd8ed1ab_0     conda-forge/noarch        59kB
+#6 20.17   + sphinx                           5.1.1  pyhd8ed1ab_1     conda-forge/noarch         2MB
+#6 20.17   + sphinxcontrib-applehelp          1.0.2  py_0             conda-forge/noarch        29kB
+#6 20.17   + sphinxcontrib-devhelp            1.0.2  py_0             conda-forge/noarch        23kB
+#6 20.17   + sphinxcontrib-htmlhelp           2.0.0  pyhd8ed1ab_0     conda-forge/noarch        32kB
+#6 20.17   + sphinxcontrib-jsmath             1.0.1  py_0             conda-forge/noarch         7kB
+#6 20.17   + sphinxcontrib-qthelp             1.0.3  py_0             conda-forge/noarch        26kB
+#6 20.17   + sphinxcontrib-serializinghtml    1.1.5  pyhd8ed1ab_2     conda-forge/noarch        28kB
+#6 20.17   + stdlib-list                      0.7.0  py_2             conda-forge/noarch        27kB
+#6 20.17   + suitesparse                     5.10.1  h9e50725_1       conda-forge/linux-64       3MB
+#6 20.17   + texttable                        1.6.4  pyhd8ed1ab_0     conda-forge/noarch        16kB
+#6 20.17   + umap-learn                       0.5.3  py310hff52083_0  conda-forge/linux-64     136kB
+#6 20.17   + xorg-fixesproto                    5.0  h7f98852_1002    conda-forge/linux-64       9kB
+#6 20.17   + xorg-inputproto                  2.3.2  h7f98852_1002    conda-forge/linux-64      20kB
+#6 20.17   + xorg-libxfixes                   5.0.3  h7f98852_1004    conda-forge/linux-64      18kB
+#6 20.17   + xorg-libxi                      1.7.10  h7f98852_0       conda-forge/linux-64      47kB
+#6 20.17   + xorg-libxtst                     1.2.3  h7f98852_1002    conda-forge/linux-64      32kB
+#6 20.17   + xorg-recordproto                1.14.2  h7f98852_1002    conda-forge/linux-64       8kB
+#6 20.17 
+#6 20.17   Summary:
+#6 20.17 
+#6 20.17   Install: 33 packages
+#6 20.17 
+#6 20.17   Total download: 202MB
+#6 20.17 
+#6 20.17 ─────────────────────────────────────────────────────────────────────────────────────────────
+#6 20.17 
+#6 61.86 
+#6 61.86 Looking for: ['openjdk', 'jaxlib', 'jax', 'scanpy', 'python-igraph', 'leidenalg']
+#6 61.86 
+#6 61.86 
+#6 61.86 Pinned packages:
+#6 61.86   - python 3.10.*
+#6 61.86   - python 3.10.6
+#6 61.86 
+#6 61.86 
+#6 61.86 Preparing transaction: ...working... done
+#6 62.03 Verifying transaction: ...working... done
+#6 63.67 Executing transaction: ...working... done
+#6 69.45 Will remove 1 package cache(s).
+#6 DONE 71.4s
+
+#7 [4/4] RUN mamba install --yes -c bioconda   'bbknn' &&   mamba clean --all -f -y &&   fix-permissions "/opt/conda" &&   fix-permissions "/home/jovyan"
+#7 sha256:65c98690f7a0d74540077904def46f85d3e6db6fe4810f52fa498d0fd69b7160
+#7 26.22 Transaction
+#7 26.22 
+#7 26.22   Prefix: /opt/conda
+#7 26.22 
+#7 26.22   Updating specs:
+#7 26.22 
+#7 26.22    - bbknn
+#7 26.22    - ca-certificates
+#7 26.22    - certifi
+#7 26.22    - openssl
+#7 26.22 
+#7 26.22 
+#7 26.22   Package         Version  Build            Channel                  Size
+#7 26.22 ───────────────────────────────────────────────────────────────────────────
+#7 26.22   Install:
+#7 26.22 ───────────────────────────────────────────────────────────────────────────
+#7 26.22 
+#7 26.22   + bbknn           1.5.1  py39h779adbc_0   bioconda/linux-64        23kB
+#7 26.22   + python-annoy   1.17.0  py310hd8f1fbe_4  conda-forge/linux-64     71kB
+#7 26.22 
+#7 26.22   Summary:
+#7 26.22 
+#7 26.22   Install: 2 packages
+#7 26.22 
+#7 26.22   Total download: 94kB
+#7 26.22 
+#7 26.22 ───────────────────────────────────────────────────────────────────────────
+#7 26.22 
+#7 40.02 
+#7 40.02 Looking for: ['bbknn']
+#7 40.02 
+#7 40.02 
+#7 40.02 Pinned packages:
+#7 40.02   - python 3.10.*
+#7 40.02   - python 3.10.6
+#7 40.02 
+#7 40.02 
+#7 40.02 Preparing transaction: ...working... done
+#7 40.02 Verifying transaction: ...working... done
+#7 40.03 Executing transaction: ...working... done
+#7 40.94 Will remove 1 package cache(s).
+#7 DONE 42.1s
+
+#8 exporting to image
+#8 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#8 exporting layers
+#8 exporting layers 7.8s done
+#8 writing image sha256:19823917fe74eb2d73e8674430ac9d24401b60dbf2955433d56112c309ae7de2 done
+#8 naming to docker.io/emanuelsoda/jupyter_singel_cell:091522 done
+#8 naming to docker.io/emanuelsoda/jupyter_singel_cell:latest done
+#8 DONE 7.8s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
